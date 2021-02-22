@@ -6,6 +6,7 @@ import createError from 'http-errors';
 const dynamodb = new AWS.DynamoDB.DocumentClient();
 
 async function createAuction(event, context) {
+  console.log(event);
   const { title } = event.body;
   const now = new Date();
 
